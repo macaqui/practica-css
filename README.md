@@ -88,6 +88,9 @@ El repositorio trae un archivo `render.yaml` para subirlo a [Render](https://ren
 Render lee el `render.yaml` y arma el servicio solo. Cuando termina, la página queda en
 `https://practica-css.onrender.com/` y ahí mismo funciona la API.
 
+La página publicada en GitHub Pages usa esta misma API: si no está en local, apunta a la
+dirección de Render, así que para ver los datos ahí el servicio tiene que estar encendido.
+
 En el plan gratis el disco es temporal: la base SQLite se crea de nuevo cada vez que el
 servicio arranca, así que los datos que agregues desde la página se pierden al reiniciar
 y vuelven los 3 datos de ejemplo. El servicio también se duerme tras 15 minutos sin

@@ -20,6 +20,9 @@
     <script type="text/babel">
         const { useState, useEffect } = React;
 
+        // En local y en Render la API esta en el mismo servidor; en GitHub Pages uso la de Render.
+        const API = (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.hostname.indexOf('onrender.com') !== -1) ? '' : 'https://practica-css.onrender.com';
+
         function Card() {
             const [frases, setFrases] = useState([]);
             const [autor, setAutor] = useState('');
@@ -27,7 +30,7 @@
             const [aviso, setAviso] = useState('');
 
             function cargar() {
-                fetch('/api/frases')
+                fetch(API + '/api/frases')
                     .then(function (r) { return r.json(); })
                     .then(function (datos) {
                         setFrases(datos);
@@ -43,7 +46,7 @@
             function agregar(e) {
                 e.preventDefault();
                 if (!autor.trim() || !texto.trim()) return;
-                fetch('/api/frases', {
+                fetch(API + '/api/frases', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ autor: autor, texto: texto })
@@ -53,7 +56,7 @@
             }
 
             function borrar(id) {
-                fetch('/api/frases/' + id, { method: 'DELETE' })
+                fetch(API + '/api/frases/' + id, { method: 'DELETE' })
                     .then(function () { cargar(); })
                     .catch(function () { setAviso('No se pudo conectar con el servidor'); });
             }
