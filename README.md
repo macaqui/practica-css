@@ -2,6 +2,8 @@
 
 Página web de una **tarjeta personal** hecha con **React 18 (vía CDN) + Babel** y **CSS puro**.
 
+> 🌐 **En vivo:** <https://macaqui.github.io/practica-css/>
+
 ## Qué hace
 
 Muestra una tarjeta centrada con una imagen, un nombre y una frase. Es un ejercicio para
@@ -22,6 +24,7 @@ xdg-open index.html
 index.html   # página con React (CDN) + Babel + el componente de la tarjeta
 style.css    # estilos de la tarjeta
 img/1.jpg    # imagen de la tarjeta
+vendor/      # copias locales de React y Babel (funciona sin internet)
 ```
 
 ## Créditos de imágenes
