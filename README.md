@@ -76,3 +76,19 @@ Rutas de la API:
 
 La página consume estas rutas con `fetch` para mostrar una frase en la tarjeta y para
 agregar y borrar frases.
+
+## Despliegue en Render
+
+El repositorio trae un archivo `render.yaml` para subirlo a [Render](https://render.com) como Blueprint.
+
+1. Crea una cuenta en Render (puedes entrar con GitHub).
+2. Pulsa "New" y luego "Blueprint".
+3. Elige este repositorio y confirma.
+
+Render lee el `render.yaml` y arma el servicio solo. Cuando termina, la página queda en
+`https://practica-css.onrender.com/` y ahí mismo funciona la API.
+
+En el plan gratis el disco es temporal: la base SQLite se crea de nuevo cada vez que el
+servicio arranca, así que los datos que agregues desde la página se pierden al reiniciar
+y vuelven los 3 datos de ejemplo. El servicio también se duerme tras 15 minutos sin
+visitas y tarda unos segundos en despertar.

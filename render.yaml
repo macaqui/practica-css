@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: practica-css
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install --include=dev && npx prisma generate
+    startCommand: npx prisma db push && node src/index.js
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL
+        value: file:./dev.db
