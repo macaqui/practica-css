@@ -34,3 +34,13 @@ Las imágenes provienen de **Wikimedia Commons** y se usan bajo licencia
 ---
 
 Proyecto desarrollado por **Samuel Hincapié**.
+
+---
+
+## Cómo abrirlo sin internet (desde la USB)
+
+La página incluye React y Babel dentro de la carpeta `vendor/`, así que no
+necesita conexión: basta con abrir `index.html` con doble clic.
+
+> Antes esas librerías se cargaban desde `unpkg.com` (un CDN). Si no había
+> internet, la página quedaba en blanco; con las copias locales ya no pasa.
