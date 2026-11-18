@@ -47,3 +47,32 @@ necesita conexión: basta con abrir `index.html` con doble clic.
 
 > Antes esas librerías se cargaban desde `unpkg.com` (un CDN). Si no había
 > internet, la página quedaba en blanco; con las copias locales ya no pasa.
+
+---
+
+## Backend
+
+Incluye un backend sencillo con Node.js, Express, Prisma y SQLite que sirve la página
+y guarda las frases.
+
+Cómo instalarlo y arrancarlo:
+
+```bash
+cd server
+npm install
+npx prisma db push
+npm start
+```
+
+Queda en <http://localhost:3003/> y la base de datos es el archivo `server/prisma/dev.db`.
+
+Rutas de la API:
+
+- `GET /api/frases` - lista todas las frases.
+- `GET /api/frases/:id` - devuelve una frase.
+- `POST /api/frases` - crea una frase.
+- `PUT /api/frases/:id` - actualiza una frase.
+- `DELETE /api/frases/:id` - borra una frase.
+
+La página consume estas rutas con `fetch` para mostrar una frase en la tarjeta y para
+agregar y borrar frases.

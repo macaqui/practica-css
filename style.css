@@ -35,3 +35,76 @@ img {
     width: 200px;
     border-radius: 20px;
 }
+
+.bloque {
+    width: 320px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.titulo {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.lista-frases {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+}
+
+.fila-frase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+}
+
+.texto-frase {
+    font-size: 14px;
+    margin: 0;
+}
+
+.autor-frase {
+    font-size: 12px;
+    font-style: italic;
+    margin: 2px 0 0;
+}
+
+.form-frase {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-frase input {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 6px 8px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.form-frase button,
+.fila-frase button {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.aviso {
+    color: darkred;
+    font-size: 13px;
+    text-align: center;
+}
